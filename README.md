@@ -28,6 +28,8 @@ A firmware and case design for a DIY pinewood derby timer. Long term this will i
 |Pin Connections|Assorted 4 pin JST 2.54 Headers|[Aliexpress](https://www.aliexpress.us/item/3256806894018733.html?spm=a2g0o.order_list.order_list_main.178.1b071802zhrFcb&gatewayAdapt=glo2usa)|
 |Main Board Cable|3.5 MM TRRS Cable 1ft|[Aliexpress](https://www.aliexpress.us/item/2255799918035646.html?spm=a2g0o.productlist.main.11.42f71f99Hc2X7e&algo_pvid=1045a3ea-71c7-4901-af9f-98f3649a2b68&algo_exp_id=1045a3ea-71c7-4901-af9f-98f3649a2b68-10&pdp_ext_f=%7B%22order%22%3A%22618%22%2C%22eval%22%3A%221%22%7D&pdp_npi=4%40dis%21USD%211.11%211.11%21%21%211.11%211.11%21%40%2110000000271066829%21sea%21US%211904804129%21X&curPageLogUid=soE38LRGgXtO&utparam-url=scene%3Asearch%7Cquery_from%3A)
 
+Not included are assorted resistors and capacitors, as are documented in the circuit schematic.
+
 # Overall Design
 
 ## Main Control Box
