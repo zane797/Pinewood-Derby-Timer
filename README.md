@@ -32,4 +32,13 @@ A firmware and case design for a DIY pinewood derby timer. Long term this will i
 
 ## Main Control Box
 
-The goal for this box was to create a replacement Pinewood Derby Track Timer and add a race management software called DerbyNet. The core of this is a Raspberry Pi Pico W with a Raspberry Pi Zero W. The goal is to create a system that reliably times differences of less than 5 ms. 
+The goal for this box was to create a replacement Pinewood Derby Track Timer and add a race management software called DerbyNet. The core of this is a Raspberry Pi Pico W with a Raspberry Pi Zero W. The goal is to create a system that reliably times differences of less than 50 ms. The sensors read at ~100Hz and require 2 successive detections of a car, to avoid false readings at the high speed. This means the effective sensing time is roughly .02 seconds. This meets the design goal of sensing times of less than 0.05 seconds. 
+
+The original design included an I2C multiplexer routed directly to the VL6180Xs in the sensor modules. This led to sensing issues and bad data reads. I suspect this was due to using I2C through several connections and wire types. This was removed and in it's place I am using simple digital command and input signal lines to command the ESP-01S modules accordingly. These have been much more reliable and once the architecture change happened reliability went up significantly.
+
+The display is a LED matrix screen using a HUB75 interface which makes the wiring more painful than the I2C interface most lightweight hobbyists like myself are used to for project displays. I think if I were to make a version 2, I would create a custom PCB for the PCB and include a HUB75 socket to make the wiring process much easier. Aside from the interface, the LED Matrix as a display worked incredibly well for my. It's easily readable even in well lit rooms, and fit perfectly in my model. I think the only thing I would change is pulling in the display a bit so it doesn't protrude from the chassis.
+
+## Sensor Module
+
+The sensor module started as just a VL6180X on a protoboard, with a couple pull up resistors and a JST connector for the wire. This turned out to be a reliability nightmare and for the initial release I updated it to have a dedicated ESP8266 in a ESP-01S package, which had exactly the number of IO pins for what I needed. The ESP-01S interfaced with the VL6180X directly and signaled the main control box when a car was detected.
+
