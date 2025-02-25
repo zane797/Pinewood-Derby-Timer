@@ -1,9 +1,9 @@
 # Pinewood-Derby-Timer
 A firmware and case design for a DIY pinewood derby timer. Long term this will integrate with the Derby Net race management software.
 
-# Main Chassis
+# Bill of Materials
 
-BOM
+## Main Control Box
 
 |Description|Part|Link|
 |-|-|-|
@@ -18,8 +18,8 @@ BOM
 |Power Plug|C14 Plug Socket|[Aliexpress](https://www.aliexpress.us/item/2251832772820835.html?spm=a2g0o.productlist.main.2.3d591da2HOevWD&algo_pvid=301f694e-7d78-4547-8c4a-70b1e5217175&algo_exp_id=301f694e-7d78-4547-8c4a-70b1e5217175-1&pdp_ext_f=%7B%22order%22%3A%22107%22%2C%22eval%22%3A%221%22%7D&pdp_npi=4%40dis%21USD%211.77%211.77%21%21%211.77%211.77%21%40%2166368851735%21sea%21US%211904804129%21X&curPageLogUid=OQS6Zu5POJlK&utparam-url=scene%3Asearch%7Cquery_from%3A)
 
 
-# Sensor Board
-BOM
+## Sensor Module
+
 |Description|Part|Link|
 |-|-|-|
 |TOF Sensor|VL6180X|[Aliexpress](https://www.aliexpress.us/item/3256806030301281.html?spm=a2g0o.order_list.order_list_main.148.1b071802zhrFcb&gatewayAdapt=glo2usa)|
