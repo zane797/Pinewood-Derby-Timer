@@ -44,3 +44,7 @@ The display is a LED matrix screen using a HUB75 interface which makes the wirin
 
 The sensor module started as just a VL6180X on a protoboard, with a couple pull up resistors and a JST connector for the wire. This turned out to be a reliability nightmare and for the initial release I updated it to have a dedicated ESP8266 in a ESP-01S package, which had exactly the number of IO pins for what I needed. The ESP-01S interfaced with the VL6180X directly and signaled the main control box when a car was detected.
 
+# Lessons Learned/V2 Plans
+
+I am unlikely to return to this project soon, but when I do these are some of the items I'd like to implement in the future to streamline the design for anyone else that makes it.
+
