@@ -28,6 +28,11 @@ A firmware and case design for a DIY pinewood derby timer. Long term this will i
 |Pin Connections|Assorted 4 pin JST 2.54 Headers|[Aliexpress](https://www.aliexpress.us/item/3256806894018733.html?spm=a2g0o.order_list.order_list_main.178.1b071802zhrFcb&gatewayAdapt=glo2usa)|
 |Main Board Cable|3.5 MM TRRS Cable 1ft|[Aliexpress](https://www.aliexpress.us/item/2255799918035646.html?spm=a2g0o.productlist.main.11.42f71f99Hc2X7e&algo_pvid=1045a3ea-71c7-4901-af9f-98f3649a2b68&algo_exp_id=1045a3ea-71c7-4901-af9f-98f3649a2b68-10&pdp_ext_f=%7B%22order%22%3A%22618%22%2C%22eval%22%3A%221%22%7D&pdp_npi=4%40dis%21USD%211.11%211.11%21%21%211.11%211.11%21%40%2110000000271066829%21sea%21US%211904804129%21X&curPageLogUid=soE38LRGgXtO&utparam-url=scene%3Asearch%7Cquery_from%3A)
 
+## Starting Line
+|Description|Part|Link|
+|-|-|-|
+|Reed Switch|GPS-14A NO|[Aliexpress]([https://www.aliexpress.us/item/3256806030301281.html?spm=a2g0o.order_list.order_list_main.148.1b071802zhrFcb&gatewayAdapt=glo2usa](https://www.aliexpress.us/item/3256808008425913.html?spm=a2g0o.productlist.main.7.d8abWLDSWLDSo3&aem_p4p_detail=2025022519145811352136621505040000922928&algo_pvid=de214a8e-0ae2-44e8-99f3-8222eafbb45e&algo_exp_id=de214a8e-0ae2-44e8-99f3-8222eafbb45e-3&pdp_ext_f=%7B%22order%22%3A%2267%22%2C%22eval%22%3A%221%22%7D&pdp_npi=4%40dis%21USD%212.02%212.02%21%21%212.02%212.02%21%40%2112000044196159447%21sea%21US%211904804129%21X&curPageLogUid=uoHMExiJc9k9&utparam-url=scene%3Asearch%7Cquery_from%3A&search_p4p_id=2025022519145811352136621505040000922928_1&_gl=1*1gz41le*_gcl_aw*R0NMLjE3Mzk5MzMzODAuQ2owS0NRaUFfTkM5QmhDa0FSSXNBQlNuU1RZYmRKbVhDTHFfT0x0UDU5ZUhIMUV0aVhhUURpQUg2a2d4ZUIxS1VYMlhGX2pHQmozdUZUd2FBcC1XRUFMd193Y0I.*_gcl_dc*R0NMLjE3Mzk5MzMzODAuQ2owS0NRaUFfTkM5QmhDa0FSSXNBQlNuU1RZYmRKbVhDTHFfT0x0UDU5ZUhIMUV0aVhhUURpQUg2a2d4ZUIxS1VYMlhGX2pHQmozdUZUd2FBcC1XRUFMd193Y0I.*_gcl_au*MTMzOTIxOTExOC4xNzM5OTI3ODMw*_ga*OTM2NDQ4NzY5MDM5MDM5LjE3Mzk5Mjc4MjgyMTE.*_ga_VED1YSGNC7*MTc0MDUzOTY5MC4yNC4xLjE3NDA1Mzk2OTguNTIuMC4w))|
+
 Not included are assorted resistors and capacitors, as are documented in the circuit schematic.
 
 # Overall Design
