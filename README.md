@@ -39,7 +39,7 @@ Not included are assorted resistors and capacitors, as are documented in the cir
 
 ## Main Control Box
 
-The goal for this box was to create a replacement Pinewood Derby Track Timer and add a race management software called DerbyNet. The core of this is a Raspberry Pi Pico W with a Raspberry Pi Zero W. The goal is to create a system that reliably times differences of less than 50 ms. The sensors read at ~100Hz and require 2 successive detections of a car, to avoid false readings at the high speed. This means the effective sensing time is roughly .02 seconds. This meets the design goal of sensing times of less than 0.05 seconds. 
+The goal for this box was to create a replacement Pinewood Derby Track Timer and add a race management software called DerbyNet. The core of this is a Raspberry Pi Pico W with a Raspberry Pi Zero W. The goal is to create a system that reliably times differences of less than 50 ms. The sensors read at ~100Hz and require 2 successive detections of a car, to avoid false readings at the high speed. This means the effective sensing time is roughly .02 seconds. This meets the design goal of sensing times of less than 0.05 seconds. One major design goal was a simple to setup system. The existing timer required precise alignment of lighting with the sensors below the track and a difficult to 
 
 The original design included an I2C multiplexer routed directly to the VL6180Xs in the sensor modules. This led to sensing issues and bad data reads. I suspect this was due to using I2C through several connections and wire types. This was removed and in it's place I am using simple digital command and input signal lines to command the ESP-01S modules accordingly. These have been much more reliable and once the architecture change happened reliability went up significantly.
 
@@ -49,7 +49,19 @@ The display is a LED matrix screen using a HUB75 interface which makes the wirin
 
 The sensor module started as just a VL6180X on a protoboard, with a couple pull up resistors and a JST connector for the wire. This turned out to be a reliability nightmare and for the initial release I updated it to have a dedicated ESP8266 in a ESP-01S package, which had exactly the number of IO pins for what I needed. The ESP-01S interfaced with the VL6180X directly and signaled the main control box when a car was detected.
 
+
 # Lessons Learned/V2 Plans
 
 I am unlikely to return to this project soon, but when I do these are some of the items I'd like to implement in the future to streamline the design for anyone else that makes it.
 
+## Lesson's Learned
+- While I2C can be used over longer distances, it can be unreliable when jumped through multiple connections with inconsistent capacitance on each leg. I should have planned on something more robust, RS485, or something simple like a simple Digital Output and Digital Input like I ended up with much earlier on.
+- I was using DIY TRRS cables using ethernet and DIY oriented 3.5 mm TRRS connectors. This was terrible in terms of reliability. I should have spent a few bucks per cable and gone to store bought from the start. Just because you can DIY doesn't mean you should.
+- 
+
+## Next Steps
+- [] Develop a custom to streamline construction. Right now the main PCB is an exremely manual process. A custom PCB would be both easier to work with and have a smaller footprint. This could also leverage something like the [Raspberry Pi Pico Stamp](https://shop.pimoroni.com/products/rp2040-stamp?variant=39567567028307) to further reduce footprint.
+- [] [DerbyNet](https://derbynet.org/) Integration. Leverage the second core on the Pi Pico to implement code to tie into the Derby Net instance being hosted on the Raspberry Pi Zero W over USB serial.
+- [] Consider alternative sensors to further drive down the timing resolution with a goal of sub 10 ms. This will need to meet the design criteria of simple to set up, so it must be only top mounted and not include additional parts under the track. i.e. Lights shining from below the track to trigger an occlusion sensor would fail as it requires the alignment of two separate assemblies.
+- [] Redesign the electronics enclosure. It always just the fastest and easiest design I could make so I could focus on firmware. It is a bit ponderous on the dowel and space could be used more efficiently.
+- [] Redesign the frame. I like the concept of a simple modular frame assembly. I did notice that dowels changed in shape much more than I expected over time, likely due to moisture changes. I'd like to improve the geometry of the joints so that 3/4" dowels with some shrinkage could be pressfit into them.
